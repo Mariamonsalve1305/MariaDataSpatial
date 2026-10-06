@@ -125,7 +125,7 @@
 
         /* Contenedor Principal */
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: -40px auto 80px auto;
             padding: 0 20px;
             position: relative;
@@ -203,7 +203,16 @@
             color: #f1f5f9;
         }
 
-        /* Textos justificados para mejor estética */
+        h4 {
+            font-size: 1.05rem;
+            color: var(--accent);
+            margin: 20px 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Textos justificados */
         p {
             color: var(--text-muted);
             margin-bottom: 15px;
@@ -211,7 +220,7 @@
             text-align: justify;
         }
 
-        /* Lista de Educación y Certificaciones */
+        /* Lista de Educación */
         .edu-item {
             margin-bottom: 20px;
             padding-left: 15px;
@@ -234,12 +243,75 @@
             margin-bottom: 5px;
         }
 
+        /* Subsecciones de historia del proyecto */
+        .project-story-section {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(56, 189, 248, 0.1);
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .question-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            background: rgba(56, 189, 248, 0.04);
+            padding: 10px 14px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .question-item i {
+            color: var(--accent);
+            margin-top: 3px;
+        }
+
+        /* Listas de metodología / conclusiones */
+        .story-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .story-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .story-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .story-list li strong {
+            color: var(--text-main);
+        }
+
         /* Tags de habilidades */
         .tags-container {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .tag {
@@ -252,6 +324,23 @@
             border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
+        .tag.soft {
+            background: rgba(129, 140, 248, 0.08);
+            color: #818cf8;
+            border-color: rgba(129, 140, 248, 0.2);
+        }
+
+        .skills-category {
+            margin-top: 20px;
+        }
+
+        .skills-category h4 {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
         .skills-text {
             font-size: 0.9rem;
             margin: 15px 0;
@@ -262,32 +351,13 @@
             color: var(--text-main);
         }
 
-        /* Imagen de Proyecto */
-        .project-image-wrapper {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            margin: 20px 0;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .project-image-wrapper img {
-            width: 100%;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-        .project-image-wrapper:hover img {
-            transform: scale(1.02);
-        }
-
         /* Botones de Acción */
         .btn-group {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .btn {
@@ -394,19 +464,49 @@
                 <p>Data Analyst and Geomatics Specialist with experience in transforming complex spatial and environmental data into strategic decisions. Proficient in <b>Power BI, SQL, Python, and ArcGIS</b> for advanced geospatial analysis and interactive KPI visualization.</p>
                 <p>I bring a competitive advantage by fusing traditional data analytics with geolocation to optimize decision-making in environmental consulting, operations, and business analytics, successfully improving delivery times and operational control through the design and automated reporting of geostatistics.</p>
             </div>
+        </div>
 
-            <div class="tags-container">
-                <span class="tag">Python (Pandas, GeoPandas)</span>
-                <span class="tag">SQL</span>
-                <span class="tag">LLM</span>
-                <span class="tag">ETL Processes</span>
-                <span class="tag">Power BI</span>
-                <span class="tag">Tableau</span>
-                <span class="tag">Looker</span>
-                <span class="tag">ArcGIS Pro</span>
-                <span class="tag">QGIS</span>
-                <span class="tag">Google Earth Engine</span>
-                <span class="tag">PostGIS</span>
+        <!-- Habilidades (Tecnológicas y Blandas Diferenciadas) -->
+        <div class="card">
+            <h2><i class="fa-solid fa-brain"></i> <span class="lang-es">Habilidades</span><span class="lang-en">Skills</span></h2>
+            
+            <div class="skills-category">
+                <h4 class="lang-es"><i class="fa-solid fa-code"></i> Habilidades Tecnológicas</h4>
+                <h4 class="lang-en"><i class="fa-solid fa-code"></i> Technical Skills</h4>
+                <div class="tags-container">
+                    <span class="tag">Python (Pandas, GeoPandas)</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">ETL Processes</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Looker</span>
+                    <span class="tag">ArcGIS Pro</span>
+                    <span class="tag">QGIS</span>
+                    <span class="tag">Google Earth Engine</span>
+                    <span class="tag">PostGIS</span>
+                </div>
+            </div>
+
+            <div class="skills-category" style="margin-top: 25px;">
+                <h4 class="lang-es"><i class="fa-solid fa-users-gear"></i> Habilidades Blandas</h4>
+                <h4 class="lang-en"><i class="fa-solid fa-users-gear"></i> Soft Skills</h4>
+                <div class="tags-container">
+                    <span class="tag soft lang-es">Análisis de datos</span>
+                    <span class="tag soft lang-en">Data Analysis</span>
+                    <span class="tag soft lang-es">Comunicación efectiva</span>
+                    <span class="tag soft lang-en">Effective Communication</span>
+                    <span class="tag soft lang-es">Trabajo en equipo</span>
+                    <span class="tag soft lang-en">Teamwork</span>
+                    <span class="tag soft lang-es">Organización</span>
+                    <span class="tag soft lang-en">Organization</span>
+                    <span class="tag soft lang-es">Proactividad</span>
+                    <span class="tag soft lang-en">Proactivity</span>
+                    <span class="tag soft lang-es">Atención al detalle</span>
+                    <span class="tag soft lang-en">Attention to Detail</span>
+                    <span class="tag soft lang-es">Optimización de Procesos</span>
+                    <span class="tag soft lang-en">Process Optimization</span>
+                </div>
             </div>
         </div>
 
@@ -442,53 +542,105 @@
                 <i class="fa-solid fa-star"></i> <span class="lang-es">Proyecto Principal • Capstone</span><span class="lang-en">Main Project • Capstone</span>
             </div>
 
-            <h3 class="lang-es">Proyecto RappiPlus: de Datos a Decisiones de Negocio</h3>
+            <h3 class="lang-es">Proyecto RappiPlus: De Datos a Decisiones de Negocio</h3>
             <h3 class="lang-en">RappiPlus Project: From Data to Business Decisions</h3>
 
             <div class="lang-es">
-                <p>El objetivo principal de este proyecto es evaluar el desempeño del servicio RappiPlus para respaldar decisiones de negocio basadas en datos. A través de un enfoque analítico, el proyecto sigue una lógica clara y progresiva para comprender la rentabilidad y el comportamiento de los usuarios.</p>
+                <p>El objetivo principal de este proyecto es evaluar el desempeño del servicio RappiPlus para respaldar decisiones de negocio basadas en datos. A través de un enfoque analítico, el proyecto sigue una lógica clara y progresiva para comprender la rentabilidad, el comportamiento de los usuarios y el impacto en conversión.</p>
                 <p><i>Proyecto destacado del programa de Análisis de Datos en Tripleten.</i></p>
             </div>
             <div class="lang-en">
-                <p>The main objective of this project is to evaluate the performance of the RappiPlus service to support data-driven business decisions. Through an analytical approach, the project follows a clear and progressive logic to understand profitability and user behavior.</p>
+                <p>The main objective of this project is to evaluate the performance of the RappiPlus service to support data-driven business decisions. Through an analytical approach, the project follows a clear and progressive logic to understand profitability, user behavior, and conversion impact.</p>
                 <p><i>Featured project for the Tripleten Data Analysis program.</i></p>
             </div>
 
+            <!-- Historia del Proyecto: Preguntas Clave -->
+            <div class="project-story-section">
+                <h4 class="lang-es"><i class="fa-solid fa-circle-question"></i> Preguntas Clave de Negocio</h4>
+                <h4 class="lang-en"><i class="fa-solid fa-circle-question"></i> Key Business Questions</h4>
+                <div class="questions-grid">
+                    <div class="question-item">
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <div><strong class="lang-es">¿Podemos confiar en nuestros datos?</strong><strong class="lang-en">Can we trust our data?</strong></div>
+                    </div>
+                    <div class="question-item">
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <div><strong class="lang-es">¿Es rentable la operación de RappiPlus?</strong><strong class="lang-en">Is the RappiPlus operation profitable?</strong></div>
+                    </div>
+                    <div class="question-item">
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <div><strong class="lang-es">¿Dónde se pierde la conversión de los usuarios?</strong><strong class="lang-en">Where do we lose user conversion?</strong></div>
+                    </div>
+                    <div class="question-item">
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <div><strong class="lang-es">¿Los usuarios se quedan a largo plazo?</strong><strong class="lang-en">Do users stay long-term?</strong></div>
+                    </div>
+                    <div class="question-item">
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <div><strong class="lang-es">¿Los cambios en la interfaz (UI) realmente funcionan?</strong><strong class="lang-en">Do UI changes actually work?</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Historia del Proyecto: Metodología -->
+            <div class="project-story-section">
+                <h4 class="lang-es"><i class="fa-solid fa-gears"></i> Metodología del Análisis</h4>
+                <h4 class="lang-en"><i class="fa-solid fa-gears"></i> Analysis Methodology</h4>
+                
+                <ul class="story-list lang-es">
+                    <li><strong>Fase 1: Ingesta y Diagnóstico de Datos (Data Quality):</strong> Limpieza exhaustiva de datos (manejo de valores ausentes, duplicados, revisión de formatos y tipos de datos adecuados).</li>
+                    <li><strong>Fase 2: Limpieza y Tratamiento de Anomalías:</strong> Estandarización de variables, corrección de valores numéricos erróneos y conversión precisa de campos de texto.</li>
+                    <li><strong>Fase 3: Análisis de Negocio y Modelado Exploratorio (EDA):</strong> Cálculo de métricas financieras clave de rentabilidad y análisis profundo de canales de marketing.</li>
+                    <li><strong>Fase 4: Validación Estadística y Experimentación:</strong> Aplicación rigurosa de pruebas estadísticas (ej. pruebas T de Student, Chi-cuadrado, Z-test de proporciones) para evaluar el impacto real de los experimentos A/B en el checkout de la plataforma.</li>
+                </ul>
+                <ul class="story-list lang-en">
+                    <li><strong>Phase 1: Data Ingestion and Diagnostics (Data Quality):</strong> Comprehensive data cleaning (handling missing values, duplicates, format reviews, and appropriate data types).</li>
+                    <li><strong>Phase 2: Cleaning and Anomaly Treatment:</strong> Standardization of variables, correction of erroneous numeric values, and precise conversion of text fields.</li>
+                    <li><strong>Phase 3: Business Analysis & Exploratory Modeling (EDA):</strong> Calculation of key financial profitability metrics and deep analysis of marketing channels.</li>
+                    <li><strong>Phase 4: Statistical Validation & Experimentation:</strong> Rigorous application of statistical tests (e.g., Student's T-test, Chi-square, Z-test for proportions) to evaluate the actual impact of A/B experiments on the platform checkout.</li>
+                </ul>
+            </div>
+
+            <!-- Historia del Proyecto: Conclusiones -->
+            <div class="project-story-section">
+                <h4 class="lang-es"><i class="fa-solid fa-lightbulb"></i> Conclusiones</h4>
+                <h4 class="lang-en"><i class="fa-solid fa-lightbulb"></i> Conclusions</h4>
+                
+                <ul class="story-list lang-es">
+                    <li><strong>Higiene de Datos:</strong> Los datasets presentaban inconsistencias típicas de entornos reales (nulos, errores de captura y formatos mixtos). Un pipeline de limpieza robusto en Python garantizó que el 100% de los datos fueran confiables para la toma de decisiones.</li>
+                    <li><strong>Visión Integral:</strong> Cruzar datos financieros (pedidos y costos) con métricas de marketing permitió entender con precisión quirúrgica el retorno de inversión por canal y categoría de producto.</li>
+                    <li><strong>Validación Científica:</strong> Las decisiones de producto no deben basarse en cambios visuales simples, sino en pruebas estadísticas rigurosas que confirmen si una variante mejora o no la conversión de forma significativa.</li>
+                </ul>
+                <ul class="story-list lang-en">
+                    <li><strong>Data Hygiene:</strong> Datasets presented typical real-world inconsistencies (nulls, capture errors, mixed formats). A robust cleaning pipeline in Python ensured 100% reliable data for decision-making.</li>
+                    <li><strong>Comprehensive Vision:</strong> Cross-referencing financial data (orders and costs) with marketing metrics enabled surgical precision in understanding ROI by channel and product category.</li>
+                    <li><strong>Scientific Validation:</strong> Product decisions should not rely on simple visual changes, but on rigorous statistical tests confirming whether a variant significantly improves conversion.</li>
+                </ul>
+            </div>
+
+            <!-- Historia del Proyecto: Recomendaciones Accionables -->
+            <div class="project-story-section">
+                <h4 class="lang-es"><i class="fa-solid fa-bullseye"></i> Recomendaciones Accionables para el Negocio</h4>
+                <h4 class="lang-en"><i class="fa-solid fa-bullseye"></i> Actionable Business Recommendations</h4>
+                
+                <ul class="story-list lang-es">
+                    <li><strong>Estandarización en la Captura:</strong> Implementar validaciones en las bases de datos de origen (frontend/backend) para evitar inconsistencias en el ingreso de países o campos nulos en variables clave.</li>
+                    <li><strong>Optimización del Gasto en Marketing:</strong> Reasignar presupuestos publicitarios hacia los canales con mejor retención y menor costo de adquisición, identificados a través del análisis de las campañas.</li>
+                    <li><strong>Iteración Basada en Experimentos:</strong> Escalar las mejoras del experimento de checkout validado estadísticamente para impactar positivamente los ingresos globales de la plataforma.</li>
+                </ul>
+                <ul class="story-list lang-en">
+                    <li><strong>Capture Standardization:</strong> Implement validations in source databases (frontend/backend) to prevent country entry inconsistencies or null fields in key variables.</li>
+                    <li><strong>Marketing Spend Optimization:</strong> Reallocate advertising budgets toward channels with better retention and lower acquisition cost, identified through campaign analysis.</li>
+                    <li><strong>Experiment-Based Iteration:</strong> Scale the improvements from the statistically validated checkout experiment to positively impact global platform revenues.</li>
+                </ul>
+            </div>
+
             <div class="skills-text">
-                <b>Skills:</b> Python, Pandas, SQL, Jupyter Notebooks
+                <b>Skills:</b> Python, Pandas, SQL, Jupyter Notebooks, A/B Testing, Statistics
             </div>
 
             <div class="btn-group">
                 <a class="btn primary" href="https://nbviewer.org/github/mariamonsalve1305/analisis-clientes-telecomunicaciones/blob/main/S12_Estudiante_Proyecto_Final.ipynb" target="_blank">
-                    <i class="fa-solid fa-code"></i> <span class="lang-es">Ver Código (Notebook)</span><span class="lang-en">View Code (Notebook)</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Proyecto Movilidad Urbana (Segundo) -->
-        <div class="card">
-            <h3 class="lang-es">Movilidad Urbana e Indicadores Económicos: Un Análisis Basado en Datos</h3>
-            <h3 class="lang-en">Urban Mobility & Economic Indicators: A Data-Driven Analysis</h3>
-
-            <div class="lang-es">
-                <p>Este proyecto analiza la compleja relación entre los patrones de movilidad urbana y los indicadores económicos clave en Latinoamérica. Mediante flujos de trabajo basados en Python, integro, limpio y estandarizo conjuntos de datos diversos para obtener información que orienta la gestión territorial sostenible y la planificación urbana inteligente.</p>
-            </div>
-            <div class="lang-en">
-                <p>This project analyzes the intricate relationship between urban mobility patterns and key economic indicators in Latin America. Using Python-based data science workflows, I integrate, clean, and standardize diverse datasets to uncover insights that inform sustainable land management and data-driven urban planning.</p>
-            </div>
-
-            <div class="skills-text">
-                <b>Skills:</b> Python 3.x, Pandas, NumPy, SQL, GeoPandas, Matplotlib, Seaborn, Power BI, Jupyter Notebooks
-            </div>
-
-            <div class="project-image-wrapper">
-                <a href="Urban_Mobility_and_Economic_Productivity_in_Latin_American_Cities.html" target="_blank">
-                    <img src="https://github.com/Mariamonsalve1305/MariaGeomatica/blob/main/grafico.png?raw=true" alt="Urban Mobility Project">
-                </a>
-            </div>
-
-            <div class="btn-group">
-                <a class="btn primary" href="Urban_Mobility_and_Economic_Productivity_in_Latin_American_Cities.html" target="_blank">
                     <i class="fa-solid fa-code"></i> <span class="lang-es">Ver Código (Notebook)</span><span class="lang-en">View Code (Notebook)</span>
                 </a>
             </div>
