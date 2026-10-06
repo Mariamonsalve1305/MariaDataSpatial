@@ -131,13 +131,27 @@
             font-weight: 400;
         }
 
-        /* Contenedor Principal */
+        /* Contenedor Principal Optimizado para Desktop */
         .container {
-            max-width: 950px;
-            margin: -40px auto 80px auto;
-            padding: 0 20px;
+            max-width: 1200px;
+            margin: -50px auto 100px auto;
+            padding: 0 30px;
             position: relative;
             z-index: 3;
+        }
+
+        /* Layout Grid para pantallas grandes en secciones superiores (Sobre Mí & Habilidades) */
+        @media (min-width: 1024px) {
+            .grid-desktop-2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                align-items: stretch;
+            }
+            .grid-desktop-2 .card {
+                margin-bottom: 0;
+                height: 100%;
+            }
         }
 
         /* Secciones y Tarjetas con efecto de iluminación ambiental */
@@ -589,61 +603,66 @@
     <!-- Contenido -->
     <div class="container">
 
-        <!-- Sobre Mí -->
-        <div class="card">
-            <h2><i class="fa-solid fa-earth-americas"></i> <span class="lang-es">Sobre Mí</span><span class="lang-en">About Me</span></h2>
-            
-            <div class="lang-es">
-                <p>Analista de Datos y Especialista en Geomática con experiencia en transformar datos espaciales y ambientales complejos en decisiones estratégicas. Competente en <b>Power BI, SQL, Python y ArcGIS</b> para el análisis geoespacial avanzado y la visualización interactiva de KPIs.</p>
-                <p>Aporto una ventaja competitiva al fusionar la analítica de datos tradicional con la geolocalización para optimizar la toma de decisiones en el sector de consultoría ambiental, operaciones y analítica de negocio, logrando optimizar los tiempos de entrega y el control operativo mediante el diseño y reporte automatizado de geoestadísticas.</p>
-            </div>
-            
-            <div class="lang-en">
-                <p>Data Analyst and Geomatics Specialist with experience in transforming complex spatial and environmental data into strategic decisions. Proficient in <b>Power BI, SQL, Python, and ArcGIS</b> for advanced geospatial analysis and interactive KPI visualization.</p>
-                <p>I bring a competitive advantage by fusing traditional data analytics with geolocation to optimize decision-making in environmental consulting, operations, and business analytics, successfully improving delivery times and operational control through the design and automated reporting of geostatistics.</p>
-            </div>
-        </div>
-
-        <!-- Habilidades (Tecnológicas y Blandas Diferenciadas) -->
-        <div class="card">
-            <h2><i class="fa-solid fa-brain"></i> <span class="lang-es">Habilidades</span><span class="lang-en">Skills</span></h2>
-            
-            <div class="skills-category">
-                <h4 class="lang-es"><i class="fa-solid fa-code"></i> Habilidades Tecnológicas</h4>
-                <h4 class="lang-en"><i class="fa-solid fa-code"></i> Technical Skills</h4>
-                <div class="tags-container">
-                    <span class="tag">Python (Pandas, GeoPandas)</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">ETL Processes</span>
-                    <span class="tag">Power BI</span>
-                    <span class="tag">Tableau</span>
-                    <span class="tag">Looker</span>
-                    <span class="tag">ArcGIS Pro</span>
-                    <span class="tag">QGIS</span>
-                    <span class="tag">Google Earth Engine</span>
-                    <span class="tag">PostGIS</span>
+        <!-- Contenedor en Grid de 2 columnas para Desktop (Sobre Mí + Habilidades) -->
+        <div class="grid-desktop-2" style="margin-bottom: 30px;">
+            <!-- Sobre Mí -->
+            <div class="card">
+                <h2><i class="fa-solid fa-earth-americas"></i> <span class="lang-es">Sobre Mí</span><span class="lang-en">About Me</span></h2>
+                
+                <div class="lang-es">
+                    <p>Soy Ingeniera Ambiental y Especialista en Geomática, con cerca de cuatro años de experiencia trabajando con datos espaciales, territoriales y ambientales. Mi trayectoria me ha llevado a participar en proyectos donde el reto no es solamente obtener datos, sino entenderlos, validarlos, transformarlos y convertirlos en información útil para la toma de decisiones. Por eso, he desarrollado habilidades a lo largo de todo el ciclo del dato: desde su captura, estructuración y limpieza, hasta el análisis, modelamiento, visualización y comunicación de resultados.</p>
+                    <p>Uno de los proyectos más significativos de mi trayectoria fue mi participación como gestora de datos SIG en un programa de monitoreo ambiental de la Amazonía colombiana, donde trabajé con modelos para la medición y validación de 21 variables y 15 indicadores. Esta experiencia fortaleció mi capacidad para trabajar con grandes volúmenes de información, identificar inconsistencias, mejorar y automatizar procesos, validar resultados y construir información confiable para su posterior análisis y visualización.</p>
+                    <p>Actualmente continúo aplicando estas capacidades en análisis multitemporales, cruces de múltiples fuentes de información y evaluación territorial, apoyándome en herramientas como ArcGIS Pro, ModelBuilder y bases de datos geográficas. Recientemente amplié mi formación hacia Data Analytics, desarrollando 11 proyectos en los que trabajé con Python, Pandas, SQL, Power BI, Tableau y análisis estadístico. Mi proyecto final, enfocado en el análisis de RappiPlus, integró limpieza y transformación de datos, métricas de rentabilidad, análisis de funnel y retención mediante SQL, análisis estadístico en Python y visualización de resultados en Power BI. Hoy busco seguir creciendo como Data Analyst y evolucionar hacia roles de Data/Spatial Analytics, combinando mi experiencia en análisis de datos con el conocimiento especializado del componente espacial. Mi objetivo es transformar datos complejos en información clara, accionable y relevante para apoyar mejores decisiones.</p>
+                </div>
+                
+                <div class="lang-en">
+                    <p>I am an Environmental Engineer and Geomatics Specialist with nearly four years of experience working with spatial, territorial, and environmental data. My career has involved participating in projects where the challenge is not just acquiring data, but understanding, validating, transforming, and turning it into actionable information for decision-making. As a result, I have developed skills across the entire data lifecycle: from capture, structuring, and cleaning, to analysis, modeling, visualization, and communication of results.</p>
+                    <p>One of the most significant projects in my career was my role as a GIS Data Manager in an environmental monitoring program for the Colombian Amazon, where I worked with models measuring and validating 21 variables and 15 indicators. This experience strengthened my ability to handle large volumes of information, identify inconsistencies, improve and automate processes, validate results, and build reliable information for subsequent analysis and visualization.</p>
+                    <p>I currently continue applying these capabilities in multitemporal analysis, cross-referencing multiple information sources, and territorial evaluation, utilizing tools such as ArcGIS Pro, ModelBuilder, and geographic databases. Recently, I expanded my expertise into Data Analytics, developing 11 projects using Python, Pandas, SQL, Power BI, Tableau, and statistical analysis. My capstone project, focused on RappiPlus analysis, integrated data cleaning and transformation, profitability metrics, funnel and retention analysis via SQL, statistical analysis in Python, and Power BI visualization. Today, I seek to continue growing as a Data Analyst and evolve into Data/Spatial Analytics roles, combining my data analysis expertise with specialized knowledge of the spatial component. My goal is to transform complex data into clear, actionable, and relevant insights to support better decisions.</p>
                 </div>
             </div>
 
-            <div class="skills-category" style="margin-top: 25px;">
-                <h4 class="lang-es"><i class="fa-solid fa-users-gear"></i> Habilidades Blandas</h4>
-                <h4 class="lang-en"><i class="fa-solid fa-users-gear"></i> Soft Skills</h4>
-                <div class="tags-container">
-                    <span class="tag soft lang-es">Análisis de datos</span>
-                    <span class="tag soft lang-en">Data Analysis</span>
-                    <span class="tag soft lang-es">Comunicación efectiva</span>
-                    <span class="tag soft lang-en">Effective Communication</span>
-                    <span class="tag soft lang-es">Trabajo en equipo</span>
-                    <span class="tag soft lang-en">Teamwork</span>
-                    <span class="tag soft lang-es">Organización</span>
-                    <span class="tag soft lang-en">Organization</span>
-                    <span class="tag soft lang-es">Proactividad</span>
-                    <span class="tag soft lang-en">Proactivity</span>
-                    <span class="tag soft lang-es">Atención al detalle</span>
-                    <span class="tag soft lang-en">Attention to Detail</span>
-                    <span class="tag soft lang-es">Optimización de Procesos</span>
-                    <span class="tag soft lang-en">Process Optimization</span>
+            <!-- Habilidades (Tecnológicas y Blandas Diferenciadas) -->
+            <div class="card">
+                <h2><i class="fa-solid fa-brain"></i> <span class="lang-es">Habilidades</span><span class="lang-en">Skills</span></h2>
+                
+                <div class="skills-category">
+                    <h4 class="lang-es"><i class="fa-solid fa-code"></i> Habilidades Tecnológicas</h4>
+                    <h4 class="lang-en"><i class="fa-solid fa-code"></i> Technical Skills</h4>
+                    <div class="tags-container">
+                        <span class="tag">Python (Pandas, GeoPandas)</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">LLM</span>
+                        <span class="tag">ETL Processes</span>
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Tableau</span>
+                        <span class="tag">Looker</span>
+                        <span class="tag">ArcGIS Pro</span>
+                        <span class="tag">QGIS</span>
+                        <span class="tag">Google Earth Engine</span>
+                        <span class="tag">PostGIS</span>
+                    </div>
+                </div>
+
+                <div class="skills-category" style="margin-top: 25px;">
+                    <h4 class="lang-es"><i class="fa-solid fa-users-gear"></i> Habilidades Blandas</h4>
+                    <h4 class="lang-en"><i class="fa-solid fa-users-gear"></i> Soft Skills</h4>
+                    <div class="tags-container">
+                        <span class="tag soft lang-es">Análisis de datos</span>
+                        <span class="tag soft lang-en">Data Analysis</span>
+                        <span class="tag soft lang-es">Comunicación efectiva</span>
+                        <span class="tag soft lang-en">Effective Communication</span>
+                        <span class="tag soft lang-es">Trabajo en equipo</span>
+                        <span class="tag soft lang-en">Teamwork</span>
+                        <span class="tag soft lang-es">Organización</span>
+                        <span class="tag soft lang-en">Organization</span>
+                        <span class="tag soft lang-es">Proactividad</span>
+                        <span class="tag soft lang-en">Proactivity</span>
+                        <span class="tag soft lang-es">Atención al detalle</span>
+                        <span class="tag soft lang-en">Attention to Detail</span>
+                        <span class="tag soft lang-es">Optimización de Procesos</span>
+                        <span class="tag soft lang-en">Process Optimization</span>
+                    </div>
                 </div>
             </div>
         </div>
