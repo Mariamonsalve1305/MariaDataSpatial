@@ -276,6 +276,28 @@
             margin-top: 3px;
         }
 
+        /* Contenedor Responsivo para el Dashboard de Power BI (Iframe) */
+        .dashboard-container {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            background: rgba(3, 7, 18, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .dashboard-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         /* Listas de metodología / conclusiones */
         .story-list {
             list-style: none;
@@ -396,6 +418,7 @@
             .container { margin-top: -20px; }
             .card { padding: 20px; }
             .top-controls { top: 10px; right: 10px; }
+            .dashboard-container { height: 380px; }
         }
     </style>
 </head>
@@ -582,6 +605,18 @@
                 </div>
             </div>
 
+            <!-- Sección de Dashboard Interactivo Power BI -->
+            <div class="project-story-section">
+                <h4 class="lang-es"><i class="fa-solid fa-chart-pie"></i> Dashboard Interactivo (Power BI)</h4>
+                <h4 class="lang-en"><i class="fa-solid fa-chart-pie"></i> Interactive Dashboard (Power BI)</h4>
+                <p class="lang-es">Explora el reporte interactivo en tiempo real con los principales KPIs de rentabilidad, comportamiento de usuarios y conversión del proyecto:</p>
+                <p class="lang-en">Explore the interactive real-time report featuring key performance metrics for profitability, user behavior, and conversion:</p>
+                
+                <div class="dashboard-container">
+                    <iframe title="Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiYzViZGE4OTQtNzc0Ni00YTA4LTlkOTgtYjkxMzk0ZThjMTYyIiwidCI6ImQ2NDZkM2E4LTdiMTUtNGI1My05ZDkyLTk4MTVmZDYyNzAyYyIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+                </div>
+            </div>
+
             <!-- Historia del Proyecto: Metodología -->
             <div class="project-story-section">
                 <h4 class="lang-es"><i class="fa-solid fa-gears"></i> Metodología del Análisis</h4>
@@ -636,7 +671,7 @@
             </div>
 
             <div class="skills-text">
-                <b>Skills:</b> Python, Pandas, SQL, Jupyter Notebooks, A/B Testing, Statistics
+                <b>Skills:</b> Python, Pandas, SQL, Jupyter Notebooks, A/B Testing, Statistics, Power BI
             </div>
 
             <div class="btn-group">
