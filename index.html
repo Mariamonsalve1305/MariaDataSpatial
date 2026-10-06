@@ -549,6 +549,32 @@
             .tags-container { gap: 8px; }
             .tag { padding: 6px 12px; font-size: 0.8rem; }
         }
+    
+        /* Estilos para el Avatar de Perfil / Personal Branding */
+        .profile-avatar-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 25px var(--accent-glow), 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .profile-avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px var(--accent), 0 15px 30px rgba(0, 0, 0, 0.6);
+            border-color: #ffffff;
+        }
+
     </style>
 </head>
 <body>
@@ -622,10 +648,15 @@
                 </div>
             </div>
 
-            <!-- Habilidades (Tecnológicas y Blandas Diferenciadas) -->
+            <!-- Habilidades (Tecnológicas y Blandas Diferenciadas) con Avatar Superior -->
             <div class="card">
                 <h2><i class="fa-solid fa-brain"></i> <span class="lang-es">Habilidades</span><span class="lang-en">Skills</span></h2>
                 
+                <!-- Fotografía de Perfil con Estilo Circular y Halo de Luz -->
+                <div class="profile-avatar-container">
+                    <img src="https://raw.githubusercontent.com/Mariamonsalve1305/MariaGeomatica/main/Fotografia%20LinkeidIn.png" alt="María Monsalve" class="profile-avatar">
+                </div>
+
                 <div class="skills-category">
                     <h4 class="lang-es"><i class="fa-solid fa-code"></i> Habilidades Tecnológicas</h4>
                     <h4 class="lang-en"><i class="fa-solid fa-code"></i> Technical Skills</h4>
